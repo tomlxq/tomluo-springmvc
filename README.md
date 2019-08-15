@@ -1,3 +1,3 @@
-﻿## tomluo 出品 springmvc archetype ##
+﻿# 多模块 demo
 
 ## 1 springmvc框架 
