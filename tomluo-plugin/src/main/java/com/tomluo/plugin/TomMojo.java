@@ -9,14 +9,12 @@ import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
-import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,11 +26,13 @@ import java.util.regex.Pattern;
  */
 @Mojo(name = "tom-plugin", defaultPhase = LifecyclePhase.PACKAGE)
 public class TomMojo extends AbstractMojo {
-    @Parameter(property = "greeting", defaultValue = "Hello World!")
+    @Parameter(defaultValue = ".jsp,.html")
+    private String includes;
+    @Parameter(property = "project.basedir")
     private String basedir;
-    @Parameter
+    @Parameter(property = "project.build.directory")
     private String buildDirectory;
-    @Parameter
+    @Parameter(property = "project.build.sourceDirectory")
     private String sourceDirectory;
     @Parameter(property = "args")
     private String args;

@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
     <version>1.2-SNAPSHOT</version>
     <description>tomluo出品</description>
+
     <modules>
         <module>tomluo-web</module>
         <module>tomluo-generator</module>
@@ -162,6 +163,29 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>Nexus Public Plugin</id>
+            <name>Nexus Public Plugin</name>
+            <url>http://192.168.238.150:8081/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://192.168.238.150:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://192.168.238.150:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <plugins>

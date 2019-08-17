@@ -19,12 +19,36 @@
         <java.version>1.8</java.version>
         <java.encoding>UTF-8</java.encoding>
     </properties>
-<dependencies>
-    <dependency>
-        <groupId>commons-io</groupId>
-        <artifactId>commons-io</artifactId>
-        <version>2.6</version>
-    </dependency></dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+    </dependencies>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>Nexus Public Plugin</id>
+            <name>Nexus Public Plugin</name>
+            <url>http://192.168.238.150:8081/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://192.168.238.150:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://192.168.238.150:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
     <profiles>
         <profile>
             <id>dev</id>
@@ -67,11 +91,8 @@
             <plugin>
                 <groupId>com.tomluo.plugin</groupId>
                 <artifactId>tomluo-plugin</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.2-SNAPSHOT</version>
                 <configuration>
-                    <basedir>${project.basedir}</basedir>
-                    <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
-                    <buildDirectory>${project.build.directory}</buildDirectory>
                     <myIntegers>
                         <option>10</option>
                         <option>5</option>
