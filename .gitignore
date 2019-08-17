@@ -39,4 +39,5 @@ Thumbs.db
 
 # node_modules
 node_modules
-
+pom.xml.versionsBackup
+**/pom.xml.versionsBackup
