@@ -39,17 +39,17 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.gp.springmvc</groupId>
+                <groupId>com.tomluo.springmvc</groupId>
                 <artifactId>tomluo-common-lib</artifactId>
                 <version>${project-version}</version>
             </dependency>
             <dependency>
-                <groupId>com.gp.springmvc</groupId>
+                <groupId>com.tomluo.springmvc</groupId>
                 <artifactId>tomluo-dal</artifactId>
                 <version>${project-version}</version>
             </dependency>
             <dependency>
-                <groupId>com.gp.springmvc</groupId>
+                <groupId>com.tomluo.springmvc</groupId>
                 <artifactId>tomluo-biz</artifactId>
                 <version>${project-version}</version>
             </dependency>
