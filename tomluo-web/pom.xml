@@ -15,7 +15,6 @@
         <dependency>
             <groupId>com.tomluo.springmvc</groupId>
             <artifactId>tomluo-dal</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
